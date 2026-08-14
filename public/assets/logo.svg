@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="100%">
+  <defs>
+    <!-- Background Grid Pattern -->
+    <pattern id="bg-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+
+    <!-- Glow Gradients -->
+    <radialGradient id="icon-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4ade80" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#4ade80" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="text-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Text Gradients -->
+    <linearGradient id="text-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#d1d5db"/>
+    </linearGradient>
+
+    <linearGradient id="com-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="blur-md" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+
+    <!-- Text Paths -->
+    <g id="ulamc-main" fill-rule="evenodd">
+      <!-- U -->
+      <path d="M220,58 h12 v72 h36 v-72 h12 v84 h-60 z" />
+      <!-- L -->
+      <path d="M292,58 h12 v72 h48 v12 h-60 z" />
+      <!-- A -->
+      <path d="M364,142 v-84 h60 v84 h-12 v-36 h-36 v36 z M376,70 v24 h36 v-24 z" />
+      <!-- M -->
+      <path d="M436,142 v-84 h60 v84 h-12 v-72 h-12 v36 h-12 v-36 h-12 v72 z" />
+      <!-- C -->
+      <path d="M508,58 h60 v24 h-48 v36 h48 v24 h-60 z" />
+    </g>
+
+    <g id="ulamc-com" fill-rule="evenodd">
+      <!-- Dot -->
+      <path d="M592,134 h8 v8 h-8 z" />
+      <!-- C -->
+      <path d="M608,102 h32 v8 h-24 v24 h24 v8 h-32 z" />
+      <!-- O -->
+      <path d="M648,102 h32 v40 h-32 z M656,110 h16 v24 h-16 z" />
+      <!-- M -->
+      <path d="M688,142 v-40 h40 v40 h-8 v-32 h-8 v16 h-8 v-16 h-8 v32 z" />
+    </g>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#09090b"/>
+  <rect width="100%" height="100%" fill="url(#bg-grid)"/>
+
+  <!-- Ambient Glows -->
+  <circle cx="110" cy="100" r="120" fill="url(#icon-glow)"/>
+  <ellipse cx="470" cy="100" rx="280" ry="90" fill="url(#text-glow)"/>
+
+  <!-- Pixel Dot Decorations (Background) -->
+  <g fill="#ffffff" opacity="0.05">
+    <rect x="40" y="30" width="8" height="8"/>
+    <rect x="25" y="50" width="4" height="4"/>
+    <rect x="720" y="40" width="8" height="8"/>
+    <rect x="740" y="60" width="4" height="4"/>
+    <rect x="190" y="150" width="4" height="4"/>
+    <rect x="480" y="20" width="8" height="8"/>
+  </g>
+  <g fill="#4ade80" opacity="0.15">
+    <rect x="60" y="170" width="8" height="8"/>
+    <rect x="90" y="185" width="4" height="4"/>
+    <rect x="680" y="170" width="8" height="8"/>
+    <rect x="200" y="40" width="8" height="8"/>
+  </g>
+
+  <!-- Block Shadow -->
+  <polygon points="50,150 110,185 170,150 110,115" fill="#000000" opacity="0.6" filter="url(#blur-md)"/>
+
+  <!-- ===== MINECRAFT GRASS BLOCK (Isometric) ===== -->
+  <!-- 
+    Isometric cube: top face, left face, right face
+    Center: 110, 100
+    Top face corners: top(110,42), left(58,72), bottom(110,102), right(162,72)
+    Left face: left(58,72), bottom-left(58,158), bottom(110,188), right(110,102)
+    Right face: right(162,72), bottom-right(162,158), bottom(110,188), left(110,102)
+  -->
+
+  <!-- TOP FACE — Grass (green pixelated) -->
+  <!-- Base grass color -->
+  <polygon points="110,42 58,72 110,102 162,72" fill="#5d9e3f"/>
+  <!-- Grass pixel texture on top -->
+  <g>
+    <!-- Row of pixel patches for grass texture -->
+    <polygon points="110,42 94,51 102,55 118,46" fill="#6abf47"/>
+    <polygon points="94,51 78,60 86,64 102,55" fill="#4e8c32"/>
+    <polygon points="118,46 102,55 110,59 126,50" fill="#72cc4e"/>
+    <polygon points="126,50 110,59 118,63 134,54" fill="#5aaa3a"/>
+    <polygon points="134,54 118,63 126,67 142,58" fill="#4e8c32"/>
+    <polygon points="142,58 126,67 134,71 150,62" fill="#6abf47"/>
+    <polygon points="78,60 62,69 70,73 86,64" fill="#72cc4e"/>
+    <polygon points="86,64 70,73 78,77 94,68" fill="#5aaa3a"/>
+    <polygon points="94,68 78,77 86,81 102,72" fill="#4e8c32"/>
+    <polygon points="102,72 86,81 94,85 110,76" fill="#6abf47"/>
+    <polygon points="110,76 94,85 102,89 118,80" fill="#5aaa3a"/>
+    <polygon points="118,80 102,89 110,93 126,84" fill="#72cc4e"/>
+    <polygon points="126,84 110,93 118,97 134,88" fill="#4e8c32"/>
+    <polygon points="134,88 118,97 126,101 142,92" fill="#6abf47"/>
+    <polygon points="142,92 126,101 134,105 150,96" fill="#5aaa3a"/>
+    <!-- Dark spots -->
+    <polygon points="88,58 80,62 84,64 92,60" fill="#3a6e24" opacity="0.6"/>
+    <polygon points="120,54 112,58 116,60 124,56" fill="#3a6e24" opacity="0.5"/>
+    <polygon points="104,82 96,86 100,88 108,84" fill="#3a6e24" opacity="0.6"/>
+    <polygon points="136,70 128,74 132,76 140,72" fill="#3a6e24" opacity="0.5"/>
+  </g>
+
+  <!-- LEFT FACE — Dirt -->
+  <polygon points="58,72 58,158 110,188 110,102" fill="#8b5e3c"/>
+  <!-- Dirt texture left face -->
+  <g>
+    <!-- Horizontal dirt bands -->
+    <polygon points="58,86 58,100 110,130 110,116" fill="#7a5234" opacity="0.5"/>
+    <polygon points="58,114 58,128 110,158 110,144" fill="#9c6b45" opacity="0.4"/>
+    <polygon points="58,142 58,156 110,186 110,172" fill="#7a5234" opacity="0.5"/>
+    <!-- Dirt pixel spots -->
+    <polygon points="70,90 62,94 66,96 74,92" fill="#6b4428" opacity="0.7"/>
+    <polygon points="86,100 78,104 82,106 90,102" fill="#a06a40" opacity="0.6"/>
+    <polygon points="74,118 66,122 70,124 78,120" fill="#6b4428" opacity="0.7"/>
+    <polygon points="90,128 82,132 86,134 94,130" fill="#a06a40" opacity="0.6"/>
+    <polygon points="78,146 70,150 74,152 82,148" fill="#6b4428" opacity="0.7"/>
+    <polygon points="94,156 86,160 90,162 98,158" fill="#a06a40" opacity="0.6"/>
+    <!-- Grass overhang on top of left face -->
+    <polygon points="58,72 58,80 110,110 110,102" fill="#4a7a2e" opacity="0.8"/>
+  </g>
+
+  <!-- RIGHT FACE — Dirt (darker) -->
+  <polygon points="162,72 162,158 110,188 110,102" fill="#6b4828"/>
+  <!-- Dirt texture right face -->
+  <g>
+    <!-- Horizontal dirt bands -->
+    <polygon points="162,86 162,100 110,130 110,116" fill="#5c3d20" opacity="0.5"/>
+    <polygon points="162,114 162,128 110,158 110,144" fill="#7a5234" opacity="0.4"/>
+    <polygon points="162,142 162,156 110,186 110,172" fill="#5c3d20" opacity="0.5"/>
+    <!-- Dirt pixel spots -->
+    <polygon points="150,90 158,94 154,96 146,92" fill="#4e3018" opacity="0.7"/>
+    <polygon points="134,100 142,104 138,106 130,102" fill="#7a5234" opacity="0.6"/>
+    <polygon points="146,118 154,122 150,124 142,120" fill="#4e3018" opacity="0.7"/>
+    <polygon points="130,128 138,132 134,134 126,130" fill="#7a5234" opacity="0.6"/>
+    <polygon points="142,146 150,150 146,152 138,148" fill="#4e3018" opacity="0.7"/>
+    <polygon points="126,156 134,160 130,162 122,158" fill="#7a5234" opacity="0.6"/>
+    <!-- Grass overhang on top of right face -->
+    <polygon points="162,72 162,80 110,110 110,102" fill="#3a6e24" opacity="0.8"/>
+  </g>
+
+  <!-- Block outline -->
+  <polygon points="110,42 58,72 110,102 162,72" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <polygon points="58,72 58,158 110,188 110,102" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <polygon points="162,72 162,158 110,188 110,102" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <!-- Top edge highlight -->
+  <polyline points="58,72 110,42 162,72" fill="none" stroke="#8de85a" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Text Shadows (Offset + Dark Green/Black) -->
+  <use href="#ulamc-main" x="6" y="6" fill="#022c22" stroke="#022c22" stroke-width="2"/>
+  <use href="#ulamc-com" x="6" y="6" fill="#022c22" stroke="#022c22" stroke-width="2"/>
+
+  <!-- Main Text -->
+  <use href="#ulamc-main" x="0" y="0" fill="url(#text-grad)" stroke="#022c22" stroke-width="2"/>
+  <use href="#ulamc-com" x="0" y="0" fill="url(#com-grad)" stroke="#022c22" stroke-width="2"/>
+
+  <!-- Foreground Pixel Accents -->
+  <g stroke="#022c22" stroke-width="1.5">
+    <!-- Terminal underscore cursor -->
+    <rect x="744" y="134" width="16" height="8" fill="#4ade80"/>
+    <!-- Floating bits -->
+    <rect x="750" y="80" width="8" height="8" fill="#22c55e"/>
+    <rect x="765" y="60" width="4" height="4" fill="#4ade80"/>
+    <rect x="205" y="142" width="4" height="4" fill="#ffffff"/>
+  </g>
+</svg>
